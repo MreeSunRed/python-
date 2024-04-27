@@ -1,13 +1,16 @@
-#请补充下面的函数，使其完成题目要求
-def isdiff(n):
-   s=str(n)
-   for i in s:
-       if(s.count(i)>1):
-        return False
-   return True
+import random
 
-n = int(input('请输入一个正整数：'))
-if isdiff(n) == 1:
-    print('{}的各位数字互不相同'.format(n))
-else:
-    print('{}中有重复数字'.format(n))
+
+# 请补充下面的函数，使其完成题目的要求
+def delSame(ls):
+    t = []
+    for p in ls:
+        if not p in t:
+            t.append(p)
+
+    return t
+
+
+data = [1, 2, 3, 4, 5, 2, 1, 4, 5, 3, 8, 8, 9]
+
+print(delSame(data))

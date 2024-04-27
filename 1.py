@@ -1,21 +1,13 @@
-###请定义函数LeapYear(year)，闰年返回True，否则返回False###
-def isLeapYear(year):
-    if year%400==0 or year%4==0 and not year%100==0:
-        return True
-    else :
+#请补充下面的函数，使其完成题目要求
+def isdiff(n):
+   s=str(n)
+   for i in s:
+       if(s.count(i)>1):
         return False
+   return True
 
-
-
-
-
-#####函数定义结束########################################
-
-
-count = 0
-for n in range(1900, 2021):
-    if isLeapYear(n) is True:
-        print(n, end='\t')
-        count += 1
-        if count % 5 == 0:
-            print()
+n = int(input('请输入一个正整数：'))
+if isdiff(n) == 1:
+    print('{}的各位数字互不相同'.format(n))
+else:
+    print('{}中有重复数字'.format(n))

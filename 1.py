@@ -1,8 +1,16 @@
-lst_score=[9, 10, 8, 9, 10, 7, 6, 8, 7, 8]
-#请按照题目要求在空白处编写代码
-lst_score.sort()
-lst_score.pop(0)
-lst_score.pop(-1)
+# coding=utf-8
 
+# 创建并初始化`source_list`列表
+source_list = []
+while True:
+    try:
+        list_element = input()
+        source_list.append(list_element)
+    except:
+        break
 
-print("该选手的最终得分为{}".format(sum(lst_score)/len(lst_score)))
+# 请在此添加代码，对source_list列表进行排序等操作并打印输出排序后的列表
+########## Begin ##########
+source_list.sort(reverse=True)
+print(source_list)
+########## End ##########

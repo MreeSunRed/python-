@@ -1,14 +1,17 @@
-n=int(input("请设置加密位移数："))
-dic_convertor={}
-for i in range(26):
-    ming=ord("a")+i   #ming为键的ASCII编码
-    ch=ming+n
-    if ch<=122:
-        mi=ch             #根据题目要求在注释之前补充句子
-    else:
-        mi=ch-122+96             #根据题目要求在注释之前补充句子
-    dic_convertor[chr(ming)]=chr(mi)
+####开始编写isOdd(n)函数，n为奇数时，返回True，否则返回False####
 
-mingwen=input("请输入明文：")
-for i in mingwen:
-    print(dic_convertor[i],end="")
+def isOdd(n):
+    return True if n%2==1 else False
+
+
+
+
+
+
+####函数结束###########################
+
+n = int(input('输入一个整数：'))
+if isOdd(n):
+    print("{}是奇数".format(n))
+else:
+    print("{}不是奇数".format(n))
